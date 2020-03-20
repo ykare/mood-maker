@@ -6,7 +6,7 @@ import 'firebase/firestore';
 Vue.use(firestorePlugin)
 
 const firebaseApp = firebase.initializeApp({
-    // ここにfirebaseのapi情報をコピペします。
+    // ここに Firebase の API 情報をコピーする
 });
 
 export const db = firebaseApp.firestore();

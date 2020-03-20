@@ -11,6 +11,7 @@ export default {
   components: {
     BarChart
   },
+
   props: {
     goods: {
       type: Array,
@@ -21,6 +22,7 @@ export default {
       required: true
     }
   },
+
   watch: {
     goods: function() {
       this.fillData();
@@ -29,15 +31,18 @@ export default {
       this.fillData();
     }
   },
+
   data() {
     return {
       datacollection: null,
       options: null
     };
   },
+
   mounted() {
     this.fillData();
   },
+
   methods: {
     fillData() {
       let all = [...this.goods, ...this.boos];
@@ -59,39 +64,7 @@ export default {
             borderColor: "rgb(54, 162, 235)",
             backgroundColor: "rgba(255, 99, 132, 0.8)"
           }
-        ],
-        options: {
-          elements: {
-            line: {
-              tension: 0
-            }
-          },
-          scales: {
-            xAxes: [
-              {
-                type: "time",
-                time: {
-                  parser: "mm:ss", //<- use 'parser'
-                  unit: "minute",
-                  unitStepSize: 1,
-                  displayFormats: {
-                    minute: "mm"
-                  }
-                }
-              }
-            ],
-            yAxes: [
-              {
-                ticks: {
-                  beginAtZero: true,
-                  min: 0,
-                  max: 10,
-                  stepSize: 10
-                }
-              }
-            ]
-          }
-        }
+        ]
       };
       this.options = {
         elements: {
@@ -141,6 +114,7 @@ function convertToChartData(data) {
     return { x: key, y: value };
   });
 }
+
 function getLabels(data) {
   return Array.from(
     new Set(

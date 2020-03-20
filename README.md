@@ -57,3 +57,8 @@ firebase deploy --only hosting:XXXX
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Screen shot
+
+![Top page](images/top.png)
+![Statistics page](images/statistics.png)
